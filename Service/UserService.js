@@ -2,7 +2,7 @@ var Utilizador = require("../Model/User");
 var amqp = require("amqplib/callback_api");
 
 exports.GetByName = (req, res) => {
-  Utilizador.findOne({ nome: req.params.nome }).then(function (items) {
+  Utilizador.findOne({ Nome: req.params.name }).then(function (items) {
     return res.json(items);
   });
 };
